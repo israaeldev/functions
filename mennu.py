@@ -26,10 +26,19 @@ def cadastrar_produto():
         if novo_cadastro != "sim":
             break
 
-    print("seus produtos cadastrados", produtos)
-    return produtos
+    listar_produtos(produtos)
 
-       
+
+def listar_produtos(produtos):
+    if not produtos:
+        print("nenhum produto cadastrado")
+    else:
+        print("lista de produtos cadastrados")
+        for produto in produtos:
+            print(f"{produto}")
+            
+            
+
 cadastrar_produto()
 
         
