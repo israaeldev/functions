@@ -36,18 +36,22 @@ def listar_produtos(produtos):
         print("lista de produtos cadastrados")
         for produto in produtos:
             print(f"{produto}")
-            
-            
 
-cadastrar_produto()
+    atualizar_produtos(produtos)
 
-        
-
-
-
-
-        
-
+def atualizar_produtos(produtos):
+    while True:
+        produto_atual = input("Digite o nome do produto que deseja atualizar: ")
+        if produto_atual in produtos:
+            index = produtos.index(produto_atual)
+            novo_nome = input("Digite o novo nome para o produto: ")
+            produtos[index] = novo_nome
+            print(f"Produto atualizado com sucesso: {produto_atual} -> {novo_nome}")
+        else:
+            print("produto nao encontrado")
+            break
+    
+cadastrar_produto() 
 
 
 
